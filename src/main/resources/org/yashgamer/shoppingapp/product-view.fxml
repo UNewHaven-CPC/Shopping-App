@@ -5,20 +5,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 
-<HBox xmlns="http://javafx.com/javafx"
+<fx:root type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       prefHeight="100.0" prefWidth="200.0"
         stylesheets="@./css/light.css">
-    <ImageView styleClass="product-image" pickOnBounds="true" preserveRatio="true">
-        <Image url="@images/gigastone-ram.png"/>
-    </ImageView>
+    <ImageView fx:id="productImageView" styleClass="product-image" pickOnBounds="true" preserveRatio="true"/>
     <VBox styleClass="product-description-container" HBox.hgrow="ALWAYS">
-        <Label styleClass="product-name" text="GIGASTONE DDR4 RAM 32GB Kit (2x16GB) RGB Game TURBO 3200MHz PC4-25600 CL16-18-18-40 Intel XMP 2.0 AMD Ryzen 1.35V UDIMM 288 Pin Unbuffered Non ECC"/>
-        <Label styleClass="product-price" text="\$298.98"/>
+        <Label fx:id="productName" styleClass="product-name" text="GIGASTONE DDR4 RAM 32GB Kit (2x16GB) RGB Game TURBO 3200MHz PC4-25600 CL16-18-18-40 Intel XMP 2.0 AMD Ryzen 1.35V UDIMM 288 Pin Unbuffered Non ECC"/>
+        <Label fx:id="productPrice" styleClass="product-price" text="\$298.98"/>
         <HBox>
-            <Label styleClass="product-delivery" text="Free Delivery: "/>
-            <Label styleClass="product-delivery-time" text="Overnight 7:00 AM - 11 AM"/>
+            <Label fx:id="productDeliveryType" styleClass="product-delivery" text="Free Delivery: "/>
+            <Label fx:id="productDeliveryTime" styleClass="product-delivery-time" text="Overnight 7:00 AM - 11 AM"/>
         </HBox>
         <Button mnemonicParsing="false" text="Add to cart"/>
     </VBox>
-</HBox>
+</fx:root>
