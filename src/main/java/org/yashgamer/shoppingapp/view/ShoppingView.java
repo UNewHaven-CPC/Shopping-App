@@ -3,8 +3,7 @@ package org.yashgamer.shoppingapp.view;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.VBox;
-import org.yashgamer.shoppingapp.enums.DeliveryType;
-import org.yashgamer.shoppingapp.model.ProductModel;
+import org.yashgamer.shoppingapp.data.ProductData;
 
 import java.io.IOException;
 
@@ -28,29 +27,11 @@ public class ShoppingView extends VBox {
 
     @FXML
     private void initialize(){
-        var productModel = new ProductModel(
-                "https://i.pcmag.com/imagery/articles/03UZT3ATNI7D403fy8D6Z2W-1.fit_lim.size_500x.png",
-                "GIGABYTE Radeon RX 9070 XT",
-                "$799",
-                DeliveryType.FREE_DELIVERY_TONIGHT,
-                "Overnight delivery by 10 p.m"
-        );
-        var productModel2 = new ProductModel(
-                "https://i.pcmag.com/imagery/articles/03UZT3ATNI7D403fy8D6Z2W-1.fit_lim.size_500x.png",
-                "GIGABYTE Radeon RX 9070 XT",
-                "$799",
-                DeliveryType.FREE_DELIVERY_TONIGHT,
-                "Overnight delivery by 10 p.m"
-        );
-        var productModel3 = new ProductModel(
-                "https://i.pcmag.com/imagery/articles/03UZT3ATNI7D403fy8D6Z2W-1.fit_lim.size_500x.png",
-                "GIGABYTE Radeon RX 9070 XT",
-                "$799",
-                DeliveryType.FREE_DELIVERY_TONIGHT,
-                "Overnight delivery by 10 p.m"
-        );
-        ProductView productView1 = new ProductView(productModel);
-        productContainer.getChildren().add(productView1);
+        var productModels = ProductData.getProductData();
+        productModels.forEach(productModel -> {
+            var productView = new ProductView(productModel);
+            productContainer.getChildren().add(productView);
+        });
     }
 
 }

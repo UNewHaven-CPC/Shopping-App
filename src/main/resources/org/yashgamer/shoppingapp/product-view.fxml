@@ -9,7 +9,7 @@
       xmlns:fx="http://javafx.com/fxml"
       prefHeight="100.0" prefWidth="200.0"
         stylesheets="@./css/light.css">
-    <ImageView fx:id="productImageView" styleClass="product-image" pickOnBounds="true" preserveRatio="true"/>
+    <ImageView fx:id="productImageView" styleClass="product-image" pickOnBounds="true"/>
     <VBox styleClass="product-description-container" HBox.hgrow="ALWAYS">
         <Label fx:id="productName" styleClass="product-name" text="GIGASTONE DDR4 RAM 32GB Kit (2x16GB) RGB Game TURBO 3200MHz PC4-25600 CL16-18-18-40 Intel XMP 2.0 AMD Ryzen 1.35V UDIMM 288 Pin Unbuffered Non ECC"/>
         <Label fx:id="productPrice" styleClass="product-price" text="\$298.98"/>

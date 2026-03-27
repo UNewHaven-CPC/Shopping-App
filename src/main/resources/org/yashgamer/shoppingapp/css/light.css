@@ -1,6 +1,7 @@
 .product-image{
-    -fx-fit-to-width: 200;
-    -fx-fit-to-height: 150;
+    -fx-fit-width: 200;
+    -fx-fit-height: 150;
+    -fx-preserve-ratio: false;
 }
 
 .product-description-container{
